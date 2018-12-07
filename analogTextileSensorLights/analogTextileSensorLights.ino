@@ -64,7 +64,7 @@ Adafruit_NeoPixel strip8 = Adafruit_NeoPixel(NUMPIXELS, LedPin8, NEO_GRB + NEO_K
 Adafruit_NeoPixel strip9 = Adafruit_NeoPixel(NUMPIXELS, LedPin9, NEO_GRB + NEO_KHZ800);
 Adafruit_NeoPixel strip10 = Adafruit_NeoPixel(NUMPIXELS, LedPin10, NEO_GRB + NEO_KHZ800);
 
-int sampleRate = 100;
+int sampleRate = 500;
 
 unsigned long lastRead;
 unsigned long lastReadLights;
@@ -353,11 +353,11 @@ int quad2() {
 
   // print out the sensor value
   Serial.print("quad 2 small: ");
-  Serial.print(Quad2S);
+  Serial.print(Quad2SVal);
   Serial.print(" quad 2 medium: ");
-  Serial.print(Quad2M);
+  Serial.print(Quad2MVal);
   Serial.print(" quad 2 large: ");
-  Serial.print(Quad2L);
+  Serial.print(Quad2LVal);
   Serial.println();
 
   return Quad2Sum;
@@ -373,11 +373,11 @@ int quad3() {
 
   // print out the sensor value
   Serial.print("quad 3 small: ");
-  Serial.print(Quad3S);
+  Serial.print(Quad3SVal);
   Serial.print(" quad 3 medium: ");
-  Serial.print(Quad3M);
+  Serial.print(Quad3MVal);
   Serial.print(" quad 3 large: ");
-  Serial.print(Quad3L);
+  Serial.print(Quad3LVal);
   Serial.println();
 
   return Quad3Sum;
@@ -392,11 +392,11 @@ int quad4() {
   Quad4Sum = Quad4SVal + Quad4MVal + Quad4LVal;
   // print out the sensor value
   Serial.print("quad 4 small: ");
-  Serial.print(Quad4S);
+  Serial.print(Quad4SVal);
   Serial.print(" quad 4 medium: ");
-  Serial.print(Quad4M);
+  Serial.print(Quad4MVal);
   Serial.print(" quad 4 large: ");
-  Serial.print(Quad4L);
+  Serial.print(Quad4LVal);
   Serial.println();
 
   return Quad4Sum;
